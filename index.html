@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- アプリのタイトル（ホーム画面に表示される名前） -->
+  <title>atari</title>
+  <meta name="apple-mobile-web-app-title" content="atari">
+
+  <!-- iPhone / iPad 用アイコン設定 -->
+  <link rel="apple-touch-icon" sizes="180x180" href="icon.png">
+  
+  <!-- Android / PCブラウザ用アイコン設定 -->
+  <link rel="icon" type="image/png" href="icon.png">
+
+  <!-- アプリのように全画面表示させる設定 -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+  <!-- ページを開いたら自動でStreamlitアプリへ移動する設定 -->
+  <script>
+    // ▼ ここに「atari」の実際のStreamlit公開URLを入力してください
+    const targetUrl = "https://あなたのアプリURL.streamlit.app";
+    
+    // 少しだけ待機してから自動転送（アイコン読み込み時間を確保）
+    setTimeout(function() {
+      window.location.replace(targetUrl);
+    }, 300);
+  </script>
+</head>
+<body style="font-family: sans-serif; text-align: center; padding-top: 50px; color: #555;">
+  <p>「atari」を起動しています...</p>
+  <p style="font-size: 0.8em;">自動で切り替わらない場合は<a href="https://あなたのアプリURL.streamlit.app">こちら</a>をタップしてください。</p>
+</body>
+</html>
